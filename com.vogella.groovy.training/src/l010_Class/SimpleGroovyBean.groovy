@@ -1,4 +1,4 @@
-package l010_Beans
+package l010_Class
 
 // Example Groovy bean
 class SimpleGroovyBean {

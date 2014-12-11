@@ -6,14 +6,6 @@ import java.util.regex.Pattern
 import org.junit.Test
 
 /**
- *
- * Resource list:
- *   * http://www.vogella.com/articles/JavaRegularExpressions/article.html
- *   * http://groovy.codehaus.org/Strings+and+GString#StringsandGString-Multi-linestrings
- *   * http://groovy.codehaus.org/Strings+and+GString#StringsandGString-SlashyStringliterals
- *   * http://groovy.codehaus.org/Regular+Expressions
- *   * http://naleid.com/blog/2009/04/07/groovy-161-released-with-new-find-and-findall-regexp-methods-on-string/
- *   * http://docs.codehaus.org/display/GROOVY/Documenting+Regular+Expressions+in+Groovy
  */
 class Lession  {
 
@@ -21,12 +13,7 @@ class Lession  {
     void test01_SimpleRegularExpression() {
         // First we must understand regular expressions. There's a nice tutorial at
         // http://www.vogella.com/articles/JavaRegularExpressions/article.html
-		/*
-		 * Copyright (c) 2012-2014 nadavc <https://twitter.com/nadavc>
-		 * This work is free. You can redistribute it and/or modify it under the
-		 * terms of the WTFPL, Version 2, as published by Sam Hocevar.
-		 * See the COPYING file for more details.
-		 */
+
         // Using your knowledge of regular expressions, create a regexp string that gets all the technologies
         // that begin with 'G' and end with either 'e' or 's'
         def technologies = ['Grails', 'Gradle', '.NET', 'Python', 'Groovy']
@@ -40,24 +27,16 @@ class Lession  {
     }
 
 	@Test
-    void test02_MultilineStrings() {
-        // With Groovy it's possible to declare multiline strings using either ''' or """ (Multiline GString).
-        // More info at http://groovy.codehaus.org/Strings+and+GString#StringsandGString-Multi-linestrings
+	void test02_PalindromeWithOutWhitespace() {
+		// Write the isPalindrome construct which checks if a String is a palindrome, e.g., that the letters are reverse the same at not reverse
+		// Ignore whitespace
 
-        String signs = '+, \\, and others'
+		def palindrome = "abba ab ba"
 
-        // Create the string below with Groovy
-        String javaString = "In Java a multiline string\n" +
-                "requires using special signs such as " + signs + "\n" +
-                "and can become difficult to maintain"
-        String groovyString
-        // ------------ START EDITING HERE ----------------------
-        groovyString = """In Java a multiline string
-requires using special signs such as $signs
-and can become difficult to maintain"""
-        // ------------ STOP EDITING HERE  ----------------------
-        assert groovyString == javaString
-    }
+
+		assert isPalindrome (palindrome)
+	}
+
 
 	@Test
     void test03_SlashyStrings() {
@@ -192,6 +171,13 @@ and can become difficult to maintain"""
         assert options.contains('x'), 'A commented regex must use the x flag'
         assert regexp.contains('#'), 'Comments can be inserted using the # character'
     }
+
+	boolean isPalindrome (String s) {
+		// ------------ START EDITING HERE ----------------------
+		String l = s.replaceAll(/\w/, "")
+		l.reverse()== l
+		// ------------ STOP EDITING HERE  ----------------------
+	}
 
 
 }

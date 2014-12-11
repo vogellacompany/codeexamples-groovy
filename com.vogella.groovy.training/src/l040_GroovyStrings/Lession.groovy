@@ -1,18 +1,18 @@
-package l040_GroovyBasics
-
-import groovyjarjarantlr.collections.List
+package l040_GroovyStrings
 
 import org.junit.Test
 
+
 /**
- * Lession10 - Groovy 101
+ * Lession- Groovy Strings
  *
  */
 
 class Lession  {
 
+
 	@Test
-    void test02_GStrings() {
+    void test01_GStrings() {
         // Groovy allows you to use either regular quotes (') or double-quotes (") for String declarations.
         // The difference is that double-quotes create a GString, which is a super-powered String.
 
@@ -31,39 +31,37 @@ class Lession  {
         assert result == "The size of the string 'Hello George, how are you?' is 26"
     }
 
-	@Test
-    void test03_MapsInGroovy() {
-        def map = [right: 'derecha', left: 'izquierda']
+    @Test
+    void test02_Palindrome() {
+        // Write the isPalindrome construct which checks if a String is a palindrome, e.g., that the letters are reverse the same at not reverse
+        // Ignore whitespace
 
-        // Concatenate the two values of 'right' and 'left' into result to proceed using Groovy syntax
-        def result
-        // ------------ START EDITING HERE ----------------------
-		result = map['right'] + map['left']
-		// ------------ STOP EDITING HERE  ----------------------
+        def palindrome = "abba ab ba"
 
-        assert result.toCharArray().size() == 16
+
+        assert isPalindrome (palindrome)
     }
 
 	@Test
-    void test04_Lists() {
-        // In Java, list creation can be somewhat cumbersome:
-        List<String> javaList = new ArrayList<String>()
-        javaList.add("King")
-        javaList.add("Queen")
-        javaList.add("Prince")
+	void test02_MultilineStrings() {
+		// With Groovy it's possible to declare multiline strings using either ''' or """ (Multiline GString).
+        // More info at http://groovy.codehaus.org/Strings+and+GString#StringsandGString-Multi-linestrings
 
-        // in Groovy the list creating is simplified:
-        def groovyList = ['King', 'Prince']
+        String signs = '+, \\, and others'
 
-        // Add the missing item to the Groovy list. Pay attention to the order of the items.
-        // Hint: you can use either Java's add(int, String) or Groovy's plus() method.
+        // Create the string below with Groovy
+        String javaString = "In Java a multiline string\n" +
+                "requires using special signs such as " + signs + "\n" +
+                "and can become difficult to maintain"
+        String groovyString
         // ------------ START EDITING HERE ----------------------
-        groovyList = groovyList.plus(1, 'Queen')
+        groovyString = """In Java a multiline string
+requires using special signs such as $signs
+and can become difficult to maintain"""
         // ------------ STOP EDITING HERE  ----------------------
-
-        // note how Groovy allows you to compare the *content* of the lists
-        assert groovyList == javaList
+        assert groovyString == javaString
     }
+
 
 	@Test
     void test05_ElvisAndSafeNavigation() {
@@ -97,6 +95,12 @@ class Lession  {
         assert createMessageForUser(userServiceWithoutLoggedInUser) == 'Hello Anonymous!'
     }
 
+	boolean isPalindrome (String s) {
+		// ------------ START EDITING HERE ----------------------
+		String l = s.replaceAll(/\w/, "")
+		l.reverse()== l
+		// ------------ STOP EDITING HERE  ----------------------
+	}
     private String createMessageForUser(UserService userService) {
         def message
         // ------------ START EDITING HERE ----------------------

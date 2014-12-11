@@ -1,5 +1,5 @@
 
-package l010_Beans
+package l010_Class
 
 class Greeter {
     // ------------ START EDITING HERE ----------------------

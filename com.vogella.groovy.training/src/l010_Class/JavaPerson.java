@@ -1,6 +1,6 @@
 
 
-package l010_Beans;
+package l010_Class;
 
 import java.io.Serializable;
 

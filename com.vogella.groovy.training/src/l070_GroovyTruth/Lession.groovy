@@ -1,4 +1,4 @@
-package l090_GroovyTruth
+package l070_GroovyTruth
 
 import org.junit.Test
 

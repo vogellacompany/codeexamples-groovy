@@ -1,4 +1,4 @@
-package l010_Beans
+package l010_Class
 
 import static groovy.test.GroovyAssert.shouldFail
 
@@ -10,7 +10,7 @@ import org.junit.Test
  * This should solve the compile errors in this class
  * TODO 2.) Ensure that all tests are running successfully
  */
- 
+
 class Lesson {
 
 	@Test
@@ -81,20 +81,9 @@ class Lesson {
 		assert 'Hello world!' == g.greeter()
 		// right most parameter with default value is eliminated first.
 		assert 'Moin world!' == g.greeter('Moin')
-		assert 'Moin Hamburg' == g.greeter('Moin', ',Hamburg')
-		assert nameObject.name == 'Anonymous'
+		// fix this test
+		assert 'Moin Hamburg' == g.greeter('Moin', 'Hamburg');
 	}
 
-	@Test
-	void test04_throwsNull() {
-		def myString = ''
-		// write a test using the shouldFail method to validate that the
-		// call of methods on myString throws an NPE
-		// ------------ START EDITING HERE ----------------------
-		shouldFail {
-			myString.toString()
-		}
-		// ------------ STOP EDITING HERE  ----------------------
-	}
 
 }

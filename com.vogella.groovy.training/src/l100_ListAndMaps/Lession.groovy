@@ -1,4 +1,4 @@
-package l100_Maps
+package l100_ListAndMaps
 
 import groovyjarjarantlr.collections.List
 
@@ -6,6 +6,8 @@ import org.junit.Test
 
 
 class Lession {
+
+
 
 	@Test
 	void test01_IterateWithEach() {
@@ -72,6 +74,41 @@ class Lession {
 		// ------------ STOP EDITING HERE  ----------------------
 		assert rangeResult == ['a', 'c', 'e', 'g', 'i', 'k', 'm', 'o', 'q', 's', 'u', 'w', 'y']
 	}
+
+	@Test
+	void test03_MapsInGroovy() {
+		def map = [right: 'derecha', left: 'izquierda']
+
+		// Concatenate the two values of 'right' and 'left' into result to proceed using Groovy syntax
+		def result
+		// ------------ START EDITING HERE ----------------------
+		result = map['right'] + map['left']
+		// ------------ STOP EDITING HERE  ----------------------
+
+		assert result.toCharArray().size() == 16
+	}
+
+	@Test
+	void test04_Lists() {
+		// In Java, list creation can be somewhat cumbersome:
+		List<String> javaList = new ArrayList<String>()
+		javaList.add("King")
+		javaList.add("Queen")
+		javaList.add("Prince")
+
+		// in Groovy the list creating is simplified:
+		def groovyList = ['King', 'Prince']
+
+		// Add the missing item to the Groovy list. Pay attention to the order of the items.
+		// Hint: you can use either Java's add(int, String) or Groovy's plus() method.
+		// ------------ START EDITING HERE ----------------------
+		groovyList = groovyList.plus(1, 'Queen')
+		// ------------ STOP EDITING HERE  ----------------------
+
+		// note how Groovy allows you to compare the *content* of the lists
+		assert groovyList == javaList
+	}
+
 
 
 }

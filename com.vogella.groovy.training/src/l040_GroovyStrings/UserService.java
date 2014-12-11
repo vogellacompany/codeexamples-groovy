@@ -1,4 +1,4 @@
-package l040_GroovyBasics;
+package l040_GroovyStrings;
 
 public interface UserService {
 

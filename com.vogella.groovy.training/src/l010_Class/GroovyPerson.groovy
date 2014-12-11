@@ -1,4 +1,4 @@
-package l010_Beans
+package l010_Class
 
 /**
  * A simple GroovyBean representing a person.
