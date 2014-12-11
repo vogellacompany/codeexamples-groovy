@@ -11,7 +11,7 @@ import groovy.sql.Sql
  *   * http://groovy.codehaus.org/api/groovy/sql/DataSet.html
  *
  */
-class Koan11 extends GroovyTestCase {
+class Lesson extends GroovyTestCase {
 	def baseDir = './input'
 
     final String CREATE_STMT = '''|create table PERSON (

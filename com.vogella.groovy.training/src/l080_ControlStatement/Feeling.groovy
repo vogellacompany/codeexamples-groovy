@@ -1,6 +1,6 @@
 
 
-package l080_SwitchStatement
+package l080_ControlStatement
 
 public enum Feeling {
     Happy, Sad, Neutral, Suicidal, Anticipation, Surprised, Relaxed, Guilty

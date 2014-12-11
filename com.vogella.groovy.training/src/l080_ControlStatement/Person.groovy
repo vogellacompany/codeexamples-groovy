@@ -1,6 +1,6 @@
 
 
-package l080_SwitchStatement
+package l080_ControlStatement
 
 class Person {
     String name

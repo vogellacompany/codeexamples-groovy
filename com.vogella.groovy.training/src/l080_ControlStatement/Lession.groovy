@@ -1,23 +1,13 @@
-package l080_SwitchStatement
+package l080_ControlStatement
 
 import org.junit.Test
 
 
-/**
- * More goodness
- *
- * Resource list:
- *   * http://groovy.codehaus.org/Logical+Branching#LogicalBranching-switchstatement
- */
 class Lession {
 
 	@Test
 	void test01_SwitchStatements() {
-		// Some people consider switch-case clauses to be a code smell because the same behavior can be
-		// achieved using polymorphism. Having said that, let's look at what Groovy has to offer.
-		// Have a read here: http://groovy.codehaus.org/Logical+Branching#LogicalBranching-switchstatement
-
-		// Using a switch statement, create a closure that accepts input (could be string or number) and returns
+		// Using a switch statement, create a construct that accepts input (could be string or number) and returns
 		// the following:
 		// - If it's an integer between 1-100, divide it by two
 		// - If it's a string that ends with 'ee', replace its end with 'ey'

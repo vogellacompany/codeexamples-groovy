@@ -1,3 +1,4 @@
+package fileapi;
 // write the content of the file to the console
 File file = new File("output.txt")
 file.write "Hello\n"

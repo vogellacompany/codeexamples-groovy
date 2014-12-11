@@ -1,18 +1,8 @@
-package l220_MoreClosures
+package l094_MoreClosures
 
 import org.junit.Test
 
 
-/**
- * More closures
- *
- * Resource list:
- *   * http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html#with(groovy.lang.Closure)
- *   * http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html#collect(groovy.lang.Closure)
- *   * http://groovy.codehaus.org/groovy-jdk/java/util/Collection.html
- *   * http://groovy.codehaus.org/groovy-jdk/java/io/File.html#eachFileRecurse(groovy.lang.Closure)
- *   * http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html
- */
 class Lession {
 
 	@Test

@@ -1,3 +1,4 @@
+package fileapi;
 // write the content of the file to the console
 File file = new File("./input/test.txt")
 file.eachLine{ line -> println line }

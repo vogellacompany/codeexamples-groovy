@@ -1,4 +1,4 @@
-package l200_Closures
+package l090_Closures
 
  /* Resource list:
  *   http://groovy.codehaus.org/Closures
@@ -11,12 +11,7 @@ package l200_Closures
 class Lession extends GroovyTestCase {
 
     void test01_IntroToClosures() {
-        // Closures are probably the most important feature Groovy has to offer. Unfortunately, they're
-        // tricky to understand if you have never done any functional programming.
-
-        // In short, Closures are somewhat like function objects. They contain code that may (or may not) be executed at
-        // a later time and have access to variables you pass into them (as well as implicit and free variables that
-        // were defined in the environment it was declared in).
+        // Closures are probably the most important feature Groovy has to offer.
 
         // Let's start with a simple example.
         def sayHelloClosure = { return 'Hello from Closure' }
@@ -68,10 +63,6 @@ class Lession extends GroovyTestCase {
     }
 
     void test02_MoreClosureIntro() {
-        // Now that you're familiar with Closures, you can read about them here:
-        // http://groovy.codehaus.org/Closures
-        // http://groovy.codehaus.org/Closures+-+Informal+Guide
-        // http://groovy.codehaus.org/Closures+-+Formal+Definition
 
         // So how can we use closures? Everywhere. Groovy adds a lot of convenience methods on top of regular
         // Java constructs.

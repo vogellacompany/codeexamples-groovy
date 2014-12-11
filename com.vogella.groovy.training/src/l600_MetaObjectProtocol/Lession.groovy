@@ -5,15 +5,6 @@ import org.junit.Test
 /**
  * Koan09 - Meta-programming (Meta Object Protocol)
  *
- * Reading list:
- *   * http://mrhaki.blogspot.com/2009/10/groovy-goodness-expando-as-dynamic-bean.html
- *   * http://mrhaki.blogspot.com/2009/11/groovy-goodness-intercept-methods-with.html
- *   * http://groovy.codehaus.org/Closures#Closures-thisowneranddelegate
- *   * http://stackoverflow.com/questions/8120949/what-does-delegate-mean-in-groovy/8121750#8121750
- *   * http://groovy.codehaus.org/Using+invokeMethod+and+getProperty
- *   * http://mrhaki.blogspot.com/2009/12/groovy-goodness-adding-or-overriding.html
- *   * http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html,
- *
  */
 class Lession  {
 
@@ -68,7 +59,7 @@ class Lession  {
         // In Java, we only have the 'this' keyword. It returns the current instance. Groovy does exactly the same.
         def expectedThisClassName
         // ------------ START EDITING HERE ----------------------
-        expectedThisClassName = 'lession90.Lession'
+        expectedThisClassName = 'l600_MetaObjectProtocol.Lession'
         // ------------ STOP EDITING HERE  ----------------------
 		println this.class.name
         assert this.class.name == expectedThisClassName
