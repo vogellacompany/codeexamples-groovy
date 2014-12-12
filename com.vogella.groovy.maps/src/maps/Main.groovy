@@ -1,4 +1,4 @@
-package com.vogella.groovy.maps
+package maps
 
 class Main {
 	static main(args) {

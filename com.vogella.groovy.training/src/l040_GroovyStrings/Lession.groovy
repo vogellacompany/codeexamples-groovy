@@ -36,7 +36,7 @@ class Lession  {
         // Write the isPalindrome construct which checks if a String is a palindrome, e.g., that the letters are reverse the same at not reverse
         // Ignore whitespace
 
-        def palindrome = "abba ab ba"
+        def palindrome = "abba abba"
 
 
         assert isPalindrome (palindrome)

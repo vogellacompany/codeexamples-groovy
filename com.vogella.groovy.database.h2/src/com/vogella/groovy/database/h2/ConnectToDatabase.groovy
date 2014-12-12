@@ -3,17 +3,9 @@ import groovy.sql.Sql
 
 import java.util.logging.*
 
-class ConnectToDatabase {
+def db = Sql.newInstance('jdbc:h2:mem:GinA','sa','','org.h2.Driver')
 
-	static main(args) {
-		Logger.getLogger('groovy.sql').level = Level.FINE
-		def db = Sql.newInstance(
-				'jdbc:h2:mem:GinA',
-				'sa',
-				'',
-				'org.h2.Driver')
-
-		db.execute '''
+db.execute '''
 DROP
 INDEX athleteIdx IF EXISTS;
 DROP
@@ -30,28 +22,26 @@ dateOfBirth DATE
 );
 CREATE INDEX athleteIdx ON Athlete (athleteId);
 '''
-		def athletes = [
-			[first: 'Paul',
-				last: 'Tergat',
-				birth: '1969-06-17'],
-			[first: 'Khalid', last: 'Khannouchi', birth: '1971-12-22'],
-			[first: 'Ronaldo', last: 'da Costa',
-				birth: '1970-06-07']
-		]
-		athletes.each { athlete ->
-			db.execute """
+def athletes = [
+	[first: 'Paul',
+		last: 'Tergat',
+		birth: '1969-06-17'],
+	[first: 'Khalid', last: 'Khannouchi', birth: '1971-12-22'],
+	[first: 'Ronaldo', last: 'da Costa',
+		birth: '1970-06-07']
+]
+athletes.each { athlete ->
+	db.execute """
 INSERT INTO Athlete (firstname, lastname, dateOfBirth)
 VALUES (${athlete.first}, ${athlete.last}, ${athlete.birth});
 """
-		}
+}
 
-		println ' Athlete Info '.center(25,'-')
-		def fmt = new java.text.SimpleDateFormat('dd. MMM yyyy (E)',
+println ' Athlete Info '.center(25,'-')
+def fmt = new java.text.SimpleDateFormat('dd. MMM yyyy (E)',
 		Locale.US)
-		db.eachRow('SELECT * FROM Athlete'){ athlete ->
-		println athlete.firstname + ' ' + athlete.lastname
-		println 'born on '+ fmt.format(athlete.dateOfBirth)
-		println '-' * 25
-		}
-	}
+db.eachRow('SELECT * FROM Athlete'){ athlete ->
+	println athlete.firstname + ' ' + athlete.lastname
+	println 'born on '+ fmt.format(athlete.dateOfBirth)
+	println '-' * 25
 }

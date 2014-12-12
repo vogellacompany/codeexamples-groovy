@@ -1,4 +1,4 @@
-package com.vogella.groovy.maps
+package maps
 
 def map = [name: 'Messages from mrhaki', url: 'http://mrhaki.blogspot.com', blog: true]
 def found = map.find { key, value -> key == 'name' }
