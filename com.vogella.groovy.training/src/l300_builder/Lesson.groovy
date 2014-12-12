@@ -5,7 +5,7 @@ import groovy.xml.MarkupBuilder
 import org.junit.Test
 
 /**
- * Koan10 - Slurpers and Builders
+ * Builders
  *
  */
 class Lesson  {

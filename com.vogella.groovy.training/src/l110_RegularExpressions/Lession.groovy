@@ -14,7 +14,8 @@ class Lession  {
         // First we must understand regular expressions. There's a nice tutorial at
         // http://www.vogella.com/articles/JavaRegularExpressions/article.html
 
-        // Using your knowledge of regular expressions, create a regexp string that gets all the technologies
+        // using your knowledge of regular expressions,
+		// create a regexp string that gets all the technologies
         // that begin with 'G' and end with either 'e' or 's'
         def technologies = ['Grails', 'Gradle', '.NET', 'Python', 'Groovy']
         def regexp
@@ -28,8 +29,8 @@ class Lession  {
 
 	@Test
 	void test02_PalindromeWithOutWhitespace() {
-		// Write the isPalindrome construct which checks if a String is a palindrome, e.g., that the letters are reverse the same at not reverse
-		// Ignore whitespace
+		// write the isPalindrome construct which checks if a String is a palindrome, e.g., that the letters are reverse the same at not reverse
+		// ignore whitespace
 
 		def palindrome = "abba ab ba"
 
@@ -40,8 +41,8 @@ class Lession  {
 
 	@Test
     void test03_SlashyStrings() {
-        // The other type of String declaration is called Slashy strings. They're especially useful for
-        // regular expressions. Read about them at
+        // the other type of String declaration is called Slashy strings. They're especially useful for
+        // regular expressions. Slashy strings don't need escape backslashes in regular expressions.
         // http://groovy.codehaus.org/Strings+and+GString#StringsandGString-SlashyStringliterals
 
         // Suppose we have the following text:
@@ -50,7 +51,8 @@ class Lession  {
                       |Playstation   100     5
                       |Wii           5       1000'''.stripMargin()
 
-        // If we wanted to grab the number of leftover items with a regular expression in Java, we would do this:
+        // If we wanted to grab the number of leftover items with a regular expression in Java,
+		// we would do this:
         int javaSum = 0
         String javaRegExp = "(?sm)(.*?)\\s+(\\d+)\\s+(\\d+)"
         Matcher javaMatcher = Pattern.compile(javaRegExp).matcher(text)
@@ -58,8 +60,7 @@ class Lession  {
             javaSum += Integer.valueOf(javaMatcher.group(3))
         }
 
-        // Slashy strings don't need escape backslashes in regular expressions. Translate the above regexp to
-        // a Slashy string regexp
+        //  Translate the above regexp to a Slashy string regexp using the syntax of /regex/
         def groovyRegExp
         // ------------ START EDITING HERE ----------------------
         groovyRegExp = /(?sm)(.*?)\s+(\d+)\s+(\d+)/

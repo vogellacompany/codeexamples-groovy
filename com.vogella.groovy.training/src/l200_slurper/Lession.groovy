@@ -3,22 +3,10 @@ package l200_slurper
 import org.junit.Test
 
 /**
- * Koan10 - Slurpers and Builders
- *
- * Reading list:
- *  * http://groovy.codehaus.org/Reading+XML+using+Groovy's+XmlSlurper
- *  * http://groovy.codehaus.org/api/groovy/util/XmlSlurper.html
- *  * http://groovy.codehaus.org/groovy-jdk/java/util/Collection.html#sort(groovy.lang.Closure)
- *  * http://mrhaki.blogspot.com/2009/08/groovy-goodness-spaceship-operator.html
- *  * http://groovy.codehaus.org/Creating+XML+using+Groovy's+MarkupBuilder
- *  * http://groovy.codehaus.org/api/groovy/xml/MarkupBuilder.html
- *  * http://stackoverflow.com/questions/5936003/write-html-file-using-java
- *  * http://supportweb.cs.bham.ac.uk/docs/tutorials/docsystem/build/tutorials/ant/ant.html
- *  * http://groovy.codehaus.org/Using+Ant+from+Groovy
- *  * http://ant.apache.org/manual/Tasks/copy.html
- *  * http://ant.apache.org/manual/Tasks/checksum.html
+ * Slurpers
  */
-class Koan10  {
+
+class Lession  {
 	final String path = "./input/movies.xml"
 
 	@Test

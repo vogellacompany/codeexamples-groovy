@@ -3,7 +3,7 @@ package l600_MetaObjectProtocol
 import org.junit.Test
 
 /**
- * Koan09 - Meta-programming (Meta Object Protocol)
+ * Meta-programming (Meta Object Protocol)
  *
  */
 class Lession  {

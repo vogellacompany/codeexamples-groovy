@@ -30,8 +30,7 @@ def athletes = [
 	[first: 'Ronaldo', last: 'da Costa',
 		birth: '1970-06-07']
 ]
-athletes.each { athlete ->
-	db.execute """
+athletes.each { athlete -> db.execute """
 INSERT INTO Athlete (firstname, lastname, dateOfBirth)
 VALUES (${athlete.first}, ${athlete.last}, ${athlete.birth});
 """
