@@ -34,7 +34,7 @@ class Lession  {
 
 		def palindrome = "abba ab ba"
 
-
+		// You need to adjust this method
 		assert isPalindrome (palindrome)
 	}
 
@@ -98,9 +98,7 @@ class Lession  {
         def firstNamesList = []
         // ------------ START EDITING HERE ----------------------
         def matcher = names =~ /(\w+)\s(\w+)/
-        matcher.each { match, first, last ->
-            firstNamesList << first
-        }
+        matcher.each { match, first, last -> firstNamesList << first }
         // Note - there are better ways to achieve the same in Groovy (String.eachMatch, Collections.collect, etc)
         // but that's not the point of this specific exercise :)
         // ------------ STOP EDITING HERE  ----------------------
