@@ -7,8 +7,7 @@ class Lession {
 
 	@Test
 	void test01_WithMethod() {
-		// The 'with()' method [ http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html#with(groovy.lang.Closure) ]
-		// allows you to access an object within a closure without explicitly referring to it.
+		// The 'with()' method  allows you to access an object within a closure without explicitly referring to it.
 
 		// This is how Java StringBuilders are used:
 		StringBuilder javaStringBuilder = new StringBuilder()
@@ -32,6 +31,7 @@ class Lession {
 		assert groovyResult == javaResult
 	}
 
+	@Test
 	void test02_CollectMethodOnLists() {
 		// We're often required to iterate through a whole list and and perform some sort of transformation on
 		// some (or all) of the items, returning a new list. Groovy has a method just for that:
@@ -47,6 +47,7 @@ class Lession {
 		assert uniqueTypes == [Integer, String]
 	}
 
+	@Test
 	void test03_FileIteration() {
 		// Groovy's File enhancements includes an iterator that walks through all files
 		// http://groovy.codehaus.org/groovy-jdk/java/io/File.html#eachFileRecurse(groovy.lang.Closure)
@@ -64,6 +65,7 @@ class Lession {
 
 	}
 
+	@Test
 	void test04_ConcludingExercise() {
 		// Using methods from Groovy object (http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html) and
 		// range objects, store all the prime numbers between 200 and 250 in the target variable

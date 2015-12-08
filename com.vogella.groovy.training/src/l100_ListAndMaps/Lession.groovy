@@ -87,7 +87,7 @@ class Lession {
 	@Test
 	void test04_Lists() {
 		// in Java, list creation can be somewhat cumbersome:
-		List<String> javaList = new ArrayList<String>()
+		List<String> javaList = new ArrayList<>()
 		javaList.add("King")
 		javaList.add("Queen")
 		javaList.add("Prince")

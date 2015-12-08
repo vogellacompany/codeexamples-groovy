@@ -7,6 +7,8 @@ import org.junit.Test
 
 class Lesson_Asserts {
 
+	/*Target: Get familiar with the base constructs of Groovy*/
+
 	@Test
 	// TODO make this test pass
 	void test01_AssertionsAndSomeSyntax() {
